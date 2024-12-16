@@ -8,32 +8,34 @@ package Tree;
 
 
 public class Solution_98 {
-    public TreeNode findLeft(TreeNode root){  //找到左子树的最右节点
-        if (root.left == null){
+    public TreeNode findLeft(TreeNode root) {  //找到左子树的最右节点
+        if (root.left == null) {
             return root;
         }
         return findLeft(root.left);
     }
-    public TreeNode findRight(TreeNode root){  //找到右子树的最左节点
-        if (root.right == null){
+
+    public TreeNode findRight(TreeNode root) {  //找到右子树的最左节点
+        if (root.right == null) {
             return root;
         }
         return findRight(root.right);
     }
+
     public boolean isValidBST(TreeNode root) {
-        if (root == null){
+        if (root == null) {
             return true;
         }
-        if (root.left!=null && root.left.val >= root.val){
+        if (root.left != null && root.left.val >= root.val) {
             return false;
         }
-        if (root.right!=null && root.right.val <= root.val){
+        if (root.right != null && root.right.val <= root.val) {
             return false;
         }
-        if (root.right!=null && root.val>=findLeft(root.right).val){
+        if (root.right != null && root.val >= findLeft(root.right).val) {
             return false;
         }
-        if (root.left!=null && root.val<=findRight(root.left).val){
+        if (root.left != null && root.val <= findRight(root.left).val) {
             return false;
         }
         return isValidBST(root.left) && isValidBST(root.right);

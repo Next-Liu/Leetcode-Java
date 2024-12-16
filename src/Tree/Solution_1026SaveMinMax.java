@@ -5,7 +5,7 @@ public class Solution_1026SaveMinMax {
 
     public int maxAncestorDiff(TreeNode root) {
         /**
-         * 找出存在于 不同 节点 A 和 B 之间的最大值 V，其中 V = |A.val - B.val|，且 A 是 B 的祖先。
+         * 找出存在于 不同节点 A 和 B 之间的最大值 V，其中 V = |A.val - B.val|，且 A 是 B 的祖先。
          * （如果 A 的任何子节点之一为 B，或者 A 的任何子节点是 B 的祖先，那么我们认为 A 是 B 的祖先）
          * 保存路径中的最小节点值 mn 和最大节点值 mx。
          */
