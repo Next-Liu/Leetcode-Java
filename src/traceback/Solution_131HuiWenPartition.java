@@ -27,11 +27,18 @@ public class Solution_131HuiWenPartition {
         return true;
     }
 
+    /**
+     *
+     * @param i
+     * @param length
+     * @param s
+     */
     public void dfs(int i, int length, String s) {
         if (i == length) {
             ans.add(new ArrayList<>(path));
             return;
         }
+        //枚举j作为子串的结束位置
         for (int j = i; j < length; j++) {
             String ss = s.substring(i, j + 1);
             if (check(ss)) {

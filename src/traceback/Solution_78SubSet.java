@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution_78SubSet {
+    /**
+     * 子集型回溯：
+     *    每个元素选/不选     */
     List<List<Integer>> ans = new ArrayList<>();
     List<Integer> path = new ArrayList<>();
 
