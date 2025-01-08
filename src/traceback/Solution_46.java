@@ -10,6 +10,9 @@ import java.util.List;
  * @email 2291572118@qq.com
  */
 public class Solution_46 {
+    /**
+     * 全排列
+     */
     List<List<Integer>> result = new ArrayList<>();
     LinkedList<Integer> path = new LinkedList<>();
     boolean[] used;
@@ -42,9 +45,8 @@ public class Solution_46 {
 
 
     public static void main(String[] args) {
-        char[] chars = {'a', 'b', 'c'};
-        // 将字符数组转换为字符串
-        String str = String.valueOf(chars);
-        System.out.println(str);
+        int[] nums = {1, 2, 3};
+        Solution_46 solution_46 = new Solution_46();
+        List<List<Integer>> lists = solution_46.permute(nums);
     }
 }

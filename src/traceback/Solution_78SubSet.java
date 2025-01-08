@@ -6,7 +6,10 @@ import java.util.List;
 public class Solution_78SubSet {
     /**
      * 子集型回溯：
-     *    每个元素选/不选     */
+     *    每个元素选/不选
+     * [1,2,3]为例：
+     *  子集生成顺序为：[],[3],[2],[2,3],[1],[1,3],[1,2],[1,2,3]
+     * */
     List<List<Integer>> ans = new ArrayList<>();
     List<Integer> path = new ArrayList<>();
 
