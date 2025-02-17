@@ -19,7 +19,7 @@ public class Solution_2466countGoodStrings {
                 dp[i] = (int) ((dp[i] + dp[i - zero]) % (Math.pow(10, 9) + 7));
             }
             if (i >= one) {
-                dp[i] = (dp[i] + dp[i - one]) % (10 << 9 + 7);
+                dp[i] = (int) ((dp[i] + dp[i - one]) % (Math.pow(10, 9) + 7));
             }
         }
 
