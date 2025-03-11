@@ -23,6 +23,12 @@ public class TestHashMap {
                return freCount;
            }
         });
+
+        if (!map.containsKey("apple")){
+            map.put("apple",2);
+        }else{
+            map.put("apple",4);
+        }
         // 打印排序后的结果
         for (Map.Entry<String, Integer> entry : list) {
             System.out.println(entry.getKey() + " : " + entry.getValue());
